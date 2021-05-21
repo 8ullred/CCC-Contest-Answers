@@ -1,0 +1,14 @@
+b = int(input())
+
+pka = 5*b-400
+
+print(pka)
+
+if pka < 100:
+    print("1")
+elif pka == 100:
+    print("0")
+else:
+    print("-1")
+    
+#Code by 8ullred, made in Python 3 on 2021-05-21

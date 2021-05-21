@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Homework20502 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		String str = sc.nextLine();
+		String findHappy = ":-)";
+		String findSad = ":-(";
+		int lastIndex1 = 0;
+		int lastIndex2 = 0;
+		int counthap = 0;
+		int countsda = 0;
+
+		while (lastIndex1 != -1) {
+
+			lastIndex1 = str.indexOf(findHappy, lastIndex1);
+
+			if (lastIndex1 != -1) {
+				counthap++;
+				lastIndex1 += findHappy.length();
+
+			}
+		}
+
+		while (lastIndex2 != -1) {
+
+			lastIndex2 = str.indexOf(findSad, lastIndex2);
+
+			if (lastIndex2 != -1) {
+				countsda++;
+				lastIndex2 += findSad.length();
+
+			}
+		}
+
+		if (counthap == 0 && countsda == 0) {
+			System.out.print("none");
+		} else if (counthap == countsda)
+			System.out.print("unsure");
+		else if (counthap > countsda)
+			System.out.print("happy");
+		else
+			System.out.print("sad");
+	}
+}
+//Code by 8ullred, made in Java on 2021-05-21

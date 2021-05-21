@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Solution {
+	public static void main(String args[]) {
+
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Integer> Sumac = new ArrayList<Integer>();
+		int counter = 0;
+
+		System.out.println("Please enter the first number: ");
+		int s1 = sc.nextInt();
+		System.out.println("Please enter the second number: ");
+		int s2 = sc.nextInt();
+
+		Sumac.add(s1);
+		Sumac.add(s2);
+
+		while (true) {
+			Sumac.add(Sumac.get(counter) - Sumac.get(counter + 1));
+			counter = counter + 1;
+
+			if ((Sumac.get(Sumac.size() - 1) < 0)) {
+				break;
+			}
+
+		}
+
+		Sumac.remove(Sumac.size() - 1);
+		System.out.println("The Sumac sequence is as follows: ");
+		System.out.println(Sumac);
+		System.out.println("The length of the Sumac sequence is: ");
+		System.out.print(Sumac.size());
+		sc.close();
+
+	}
+}

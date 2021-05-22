@@ -1,0 +1,14 @@
+rounds = int(input())
+names = []
+bids = []
+
+
+for x in range(rounds):
+    names.append(str(input()))
+    bids.append(int(input()))
+
+
+bidindex = bids.index(max(bids))
+print(names[bidindex])
+
+#Code by 8ullred, made in Python 3 on 2021-05-22

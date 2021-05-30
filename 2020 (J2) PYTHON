@@ -1,0 +1,15 @@
+people = int(input())
+pplwdisease = int(input())
+noofinfected = int(input())
+
+fround = pplwdisease*noofinfected
+counter = 0
+while True:
+    fround = fround*5
+    counter = counter + 1
+    if fround > people:
+        break
+
+print(counter)
+
+#Code by 8ullred, made in Python 3 on 2021-05-30

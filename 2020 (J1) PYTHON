@@ -1,0 +1,12 @@
+small = int(input())
+medium = int(input())
+large = int(input())
+
+happiness = 3*large + 2*medium + small
+if happiness >= 10:
+    print("happy")
+else:
+    print("sad")
+    
+    
+#Code by 8ullred, made in Python 3 on 2021-05-30

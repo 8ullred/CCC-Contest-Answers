@@ -1,0 +1,21 @@
+sumac = []
+counter = 0
+
+#Enter player one
+no1 = int(input())
+#Enter player two
+no2 = int(input())
+
+sumac.append(no1)
+sumac.append(no2)
+
+while True:
+    sumac.append(sumac[counter] - sumac[counter + 1])
+    counter = counter+1
+
+    if sumac[len(sumac)-1] < 0:
+        break
+
+sumac.remove(sumac[-1])
+
+print(len(sumac))
